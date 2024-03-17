@@ -2,7 +2,6 @@
 
 #include <iostream>
 #include <cmath>
-#include <vector>
 
 using std::cout;
 using std::cin;
