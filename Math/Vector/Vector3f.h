@@ -3,7 +3,7 @@
 #include <iostream>
 #include <cmath>
 
-#include "constants
+#include "constants.h"
 
 using std::cout;
 using std::cin;
