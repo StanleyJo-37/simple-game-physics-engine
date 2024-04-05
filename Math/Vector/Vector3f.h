@@ -18,11 +18,11 @@ public:
 		: m_X(0.0f), m_Y(0.0f), m_Z(0.0f) {}
 	Vector3f(float x, float y, float z)
 		: m_X(x), m_Y(y), m_Z(z) {}
+	Vector3f(float num)
+		: m_X(num), m_Y(num), m_Z(num) {}
 
 	Vector3f(const Vector3f& other);
 	Vector3f& operator=(const Vector3f& other);
-	inline static Vector3f ones() { return Vector3f(1.0f, 1.0f, 1.0f); }
-	inline static Vector3f uniform(const float pos) { return Vector3f(pos, pos, pos); }
 
 	inline float norm() const { return (float)sqrt(pow(m_X, 2.0f) + pow(m_Y, 2.0f) + pow(m_Z, 2.0f)); }
 	inline static float dotProduct(const Vector3f& v1, const Vector3f& v2) { return v1.norm() * v2.norm() * cos(angleDegree(v1, v2)); }
