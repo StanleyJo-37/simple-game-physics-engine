@@ -18,11 +18,11 @@ public:
 		: m_X(0.0f), m_Y(0.0f) {}
 	Vector2f(float x, float y)
 		: m_X(x), m_Y(y) {}
+	Vector2f(float num)
+		: m_X(num), m_Y(num) {}
 
 	Vector2f(const Vector2f& other);
 	Vector2f& operator=(const Vector2f& other);
-	inline static Vector2f ones() { return Vector2f(1.0f, 1.0f); }
-	inline static Vector2f uniform(const float pos) { return Vector2f(pos, pos); }
 
 	inline float norm() const { return static_cast<float>(sqrt(pow(m_X, 2.0f) + pow(m_Y, 2.0f))); }
 	inline static float dotProduct(const Vector2f& v1, const Vector2f& v2) { return v1.norm() * v2.norm() * cos(angleDegree(v1, v2)); }
